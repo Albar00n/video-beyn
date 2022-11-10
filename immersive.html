@@ -1,85 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
 		<style>
 			* {
 				box-sizing: border-box;
 			}
+
 			body {
-				/* position: relative;
-				display: flex;
-				align-items: center;
-				justify-content: center; */
+				margin: 0;
+				font-family: Arial;
+				font-size: 17px;
 			}
-			video {
-				/* position: fixed; */
-				/* right: 0; */
-				/* bottom: 0; */
-				width: 100vw;
-				/* height: 100vh; */
-				object-fit: contain;
-				object-position: center;
+			#myVideo {
+				position: fixed;
+				right: 0;
+				bottom: 0;
+				min-width: 100%;
+				min-height: 100%;
 			}
-			/* .im {
-				position: absolute;
-				width: 8rem;
-				z-index: 1;
-				top: 1100%;
-			} */
-
-			html {
-				font-family: "Lucida Sans", sans-serif;
-			}
-			.bg-image {
-				/* The image used */
-				background-image: url("photographer.jpg");
-
-				/* Add the blur effect */
-				filter: blur(8px);
-				-webkit-filter: blur(8px);
-
-				/* Full height */
-				height: 100%;
-
-				/* Center and scale the image nicely */
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
-			}
-			/* Position text in the middle of the page/image */
-			.bg-text {
-				background-color: rgba(255, 255, 255, 0.292); /* Fallback color */
-				background-color: rgba(255, 255, 255, 0.108); /* Black w/opacity/see-through */
-				color: white;
-				font-weight: bold;
-				border: 1px solid transparent;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				z-index: 2;
-				width: 30%;
-				padding: 20px;
-				text-align: center;
+			@media screen and (max-width: 800px) {
+				#myVideo {
+					position: relative;
+					left: 0;
+					top: 0;
+					min-width: 100%;
+					min-height: 100vh;
+				}
 			}
 		</style>
 	</head>
 	<body>
-		<div class="row">
-			<!-- <img src="/qurashi.svg" class="im" /> -->
-			<div class="bg-image">
-				<video autoplay muted>
-					<source src="/video.mp4" type="video/mp4" />
-					<!-- <source src="mov_bbb." type="video/ogg"> -->
-				</video>
-			</div>
-			<div class="bg-text">
-				<h2></h2>
-				<h1 style="font-size: 50px"></h1>
-                <img src="qurashi.svg" width="30%"/>
-				<p></p>
-			</div>
-		</div>
+		<video autoplay muted loop id="myVideo">
+			<source src="/video.mp4" type="video/mp4" />
+		</video>
 	</body>
 </html>
